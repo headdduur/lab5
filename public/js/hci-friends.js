@@ -3,7 +3,14 @@
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
+
+	//console.log($(".friend > h3").text());
+	$(".friend > h3").click(switchName);
 })
+
+function switchName() {
+	$(this).text(anagrammedName($(this).text()));
+}
 
 /*
  * Function that is called when the document is ready.
